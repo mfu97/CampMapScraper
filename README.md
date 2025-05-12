@@ -42,20 +42,6 @@ Bu yapı, APScheduler ile düzenli olarak veri çekilmesini sağlar.
 Projenin ana scriptini yerelde çalıştırmak için:
 python -m src.main
 
-🧱 Veritabanı Modeli
-Kayıt edilen veriler şu alanları içerir:
-
-id: The Dyrt sistemi içindeki benzersiz ID
-name: Kamp alanının adı
-latitude / longitude: Konum bilgileri
-region_name: Bölge adı
-nearest_city_name: En yakın şehir
-rating: Puanlama
-reviews_count: Yorum sayısı
-photo_url, photo_urls: Ana ve diğer görseller
-price_low / price_high: Fiyat aralığı
-ve diğer alanlar...
-
 📌 Gelecek Geliştirmeler
 Gelişmiş loglama
 Multithreading ya da async yapı kullanarak scraper’ın performansını artırma
