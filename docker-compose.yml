@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: postgres:13
+    container_name: case_study_postgres
+    environment:
+      POSTGRES_DB: case_study
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  scraper:
+    build: .
+    container_name: case_study_scraper
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      DB_URL: postgresql://user:password@postgres:5432/case_study
+    command: python src/main.py
+
+volumes:
+  postgres_data:

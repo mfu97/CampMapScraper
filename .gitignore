@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+venv/
+.env
+
+# Docker
+*.log
+*.pid
+*.seed
+*.pid.lock
+*.sock
+*.db
+*.db-journal
+
+# VSCode veya IDE dosyaları
+.vscode/
+.idea/
